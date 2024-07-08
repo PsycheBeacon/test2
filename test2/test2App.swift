@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct test2App: App {
+    @StateObject var manager = HealthManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MyTabView()
+                .environmentObject(manager)
         }
     }
 }

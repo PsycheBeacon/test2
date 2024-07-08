@@ -14,6 +14,10 @@
 		A41034B52C3B9839008DD32B /* test2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41034B42C3B9839008DD32B /* test2Tests.swift */; };
 		A41034BF2C3B9839008DD32B /* test2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41034BE2C3B9839008DD32B /* test2UITests.swift */; };
 		A41034C12C3B9839008DD32B /* test2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41034C02C3B9839008DD32B /* test2UITestsLaunchTests.swift */; };
+		A41034D22C3B9A94008DD32B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41034D12C3B9A94008DD32B /* HomeView.swift */; };
+		A41034D42C3B9E85008DD32B /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41034D32C3B9E85008DD32B /* MyTabView.swift */; };
+		A41034D62C3B9F69008DD32B /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41034D52C3B9F69008DD32B /* ActivityCard.swift */; };
+		A41034D82C3BA3D4008DD32B /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41034D72C3BA3D4008DD32B /* HealthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,11 @@
 		A41034BA2C3B9839008DD32B /* test2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41034BE2C3B9839008DD32B /* test2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2UITests.swift; sourceTree = "<group>"; };
 		A41034C02C3B9839008DD32B /* test2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A41034D12C3B9A94008DD32B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A41034D32C3B9E85008DD32B /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
+		A41034D52C3B9F69008DD32B /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		A41034D72C3BA3D4008DD32B /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		A41034D92C3BAAFB008DD32B /* test2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = test2.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +103,15 @@
 		A41034A22C3B9838008DD32B /* test2 */ = {
 			isa = PBXGroup;
 			children = (
+				A41034D92C3BAAFB008DD32B /* test2.entitlements */,
 				A41034A32C3B9838008DD32B /* test2App.swift */,
 				A41034A52C3B9838008DD32B /* ContentView.swift */,
 				A41034A72C3B9838008DD32B /* Assets.xcassets */,
 				A41034A92C3B9838008DD32B /* Preview Content */,
+				A41034D12C3B9A94008DD32B /* HomeView.swift */,
+				A41034D32C3B9E85008DD32B /* MyTabView.swift */,
+				A41034D52C3B9F69008DD32B /* ActivityCard.swift */,
+				A41034D72C3BA3D4008DD32B /* HealthManager.swift */,
 			);
 			path = test2;
 			sourceTree = "<group>";
@@ -258,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A41034A62C3B9838008DD32B /* ContentView.swift in Sources */,
+				A41034D82C3BA3D4008DD32B /* HealthManager.swift in Sources */,
+				A41034D22C3B9A94008DD32B /* HomeView.swift in Sources */,
+				A41034D42C3B9E85008DD32B /* MyTabView.swift in Sources */,
 				A41034A42C3B9838008DD32B /* test2App.swift in Sources */,
+				A41034D62C3B9F69008DD32B /* ActivityCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +437,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = test2/test2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"test2/Preview Content\"";
 				DEVELOPMENT_TEAM = 9R5V57PSCN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access...";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -435,7 +455,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = unknown.test2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PsycheBeacon.test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -448,12 +468,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = test2/test2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"test2/Preview Content\"";
 				DEVELOPMENT_TEAM = 9R5V57PSCN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access...";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -464,7 +486,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = unknown.test2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PsycheBeacon.test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
